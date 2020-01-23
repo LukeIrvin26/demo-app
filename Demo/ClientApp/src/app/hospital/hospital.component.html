@@ -1,0 +1,8 @@
+<ng-container *ngIf="(hospital$ | async) as hospital; else loading">
+    <h1>{{ hospital.name }}</h1>
+    <div>{{ hospital.address }}</div>
+    <ul>
+        <li>{{ hospital.phoneNumber }}</li>
+    </ul>
+</ng-container>
+<ng-template #loading>Loading...</ng-template>
